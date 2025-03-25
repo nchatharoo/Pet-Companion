@@ -3,6 +3,48 @@
 ## Overview
 This document describes the architecture of the Pet Companion game, implementation details, and design decisions.
 
+## Project Configuration
+
+### Basic Settings
+- **Name:** PetCompanion
+- **Version:** 0.1.0
+- **Main Scene:** res://scenes/main/main.tscn
+- **User Data Directory:** PetCompanion (custom directory for save data)
+
+### Display Settings
+- **Resolution:** 1280x720 viewport
+- **Stretch Mode:** canvas_items with keep_height aspect
+- **Mobile Orientation:** sensor_landscape
+- **iOS Specific:** hide home indicator and status bar
+
+### Input Configuration
+- Touch emulation from mouse enabled
+- Mouse emulation from touch disabled (for better mobile experience)
+
+### Rendering Configuration
+- **Rendering Method:** mobile (optimized for cross-platform)
+- **Anti-Aliasing:** MSAA 2D and 3D level 1
+- **Driver:** GLES2 for broader compatibility
+- **Texture Compression:**
+  - ETC for Android
+  - PVRTC for iOS
+- **Shadow Settings:** Reduced for mobile
+- **Default Environment:** Custom environment resource with optimized settings
+
+### Debug Settings
+- FPS forced to 60 in debug mode
+- FPS counter enabled in debug mode
+
+### Physics Settings
+- 30 physics ticks per second (optimized for mobile)
+- Maximum of 4 physics steps per frame
+
+### Export Configurations
+- Windows Desktop (x86_64)
+- macOS (universal)
+- Android (arm64-v8a, armeabi-v7a)
+- iOS (arm64)
+
 ## Directory Structure
 - `/assets`: Contains all game assets (models, textures, animations, sounds, UI)
 - `/scripts`: Contains all game scripts, organized by system
@@ -17,6 +59,7 @@ This document describes the architecture of the Pet Companion game, implementati
   - `/character_creation`: Character creation UI and logic
   - `/house`: House environments and components
 - `/resources`: Resource files and configurations
+  - `default_env.tres`: Default environment settings for consistent lighting and effects
 
 ## Core Systems
 

@@ -1,0 +1,16 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bwvoxn6r6i877"
+path="res://.godot/imported/default_icon.png-8b6ae8b1bcdd0d49a2e94e7e0cd1c8fe.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://assets/ui/default_icon.png"
+dest_files=["res://.godot/imported/default_icon.png-8b6ae8b1bcdd0d49a2e94e7e0cd1c8fe.ctex"]
+
+[params
