@@ -1,12 +1,12 @@
 extends Control
 
 # Reference to the ResourceManager singleton
-var resource_manager: ResourceManager
+var resource_manager
 
 # Test resource paths - these will need to be adjusted to actual resources in the project
 var test_texture_path: String = "res://assets/ui/default_icon.png"
 var test_scene_path: String = "res://scenes/main/main.tscn"
-var test_resources: Array[String] = [
+var test_resources: Array = [
 	"res://assets/ui/default_icon.png",
 	"res://scenes/main/main.tscn",
 	"res://resources/default_env.tres"

@@ -1,0 +1,155 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/tests/SettingsManagerTest.gd" id="1_test"]
+
+[node name="SettingsManagerTest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_test")
+
+[node name="InfoPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 1260.0
+offset_bottom = 80.0
+
+[node name="TitleLabel" type="Label" parent="InfoPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 356.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 24
+text = "Settings Manager Test"
+
+[node name="PlatformLabel" type="Label" parent="InfoPanel"]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 10.0
+offset_right = 1220.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 18
+text = "Platform: Unknown"
+horizontal_alignment = 2
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 100.0
+offset_right = 1260.0
+offset_bottom = 580.0
+
+[node name="Graphics" type="Control" parent="TabContainer"]
+layout_mode = 2
+
+[node name="SettingsContainer" type="VBoxContainer" parent="TabContainer/Graphics"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sound" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="SettingsContainer" type="VBoxContainer" parent="TabContainer/Sound"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Controls" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="SettingsContainer" type="VBoxContainer" parent="TabContainer/Controls"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Gameplay" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="SettingsContainer" type="VBoxContainer" parent="TabContainer/Gameplay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ControlPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 600.0
+offset_right = 780.0
+offset_bottom = 700.0
+
+[node name="ResetButton" type="Button" parent="ControlPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 220.0
+offset_bottom = 80.0
+text = "Reset to Defaults"
+
+[node name="SaveButton" type="Button" parent="ControlPanel"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 20.0
+offset_right = 440.0
+offset_bottom = 80.0
+text = "Save Settings"
+
+[node name="LoadButton" type="Button" parent="ControlPanel"]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 20.0
+offset_right = 660.0
+offset_bottom = 80.0
+text = "Load Settings"
+
+[node name="TestResultsPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 600.0
+offset_right = 1260.0
+offset_bottom = 700.0
+
+[node name="TestResultsLabel" type="Label" parent="TestResultsPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 440.0
+offset_bottom = 80.0
+text = "Test Results: Ready"
+autowrap_mode = 3

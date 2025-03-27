@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf2xtjhbsmgtv"]
+
+[ext_resource type="Script" path="res://scripts/entities/furniture/Bed.gd" id="1_yx5ua"]
+
+[node name="PetBed" type="Node3D"]
+script = ExtResource("1_yx5ua")
+is_pet_bed = true

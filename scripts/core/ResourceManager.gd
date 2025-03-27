@@ -18,7 +18,7 @@ const MEMORY_WARNING_THRESHOLD: int = 500 * 1024 * 1024  # 500 MB
 var _resource_cache: Dictionary = {}
 
 # Queue for asynchronous loading
-var _load_queue: Array[Dictionary] = []
+var _load_queue: Array = []
 
 # Statistics
 var _total_cache_size: int = 0
@@ -115,7 +115,7 @@ func unload_resource(path: String) -> bool:
 
 # Preload a list of resources asynchronously
 # The callback will be called once all resources are loaded with an array of loaded resources
-func preload_resources(paths: Array[String], callback: Callable, cache: bool = true) -> void:
+func preload_resources(paths: Array, callback: Callable, cache: bool = true) -> void:
 	var loaded_resources: Array = []
 	var resources_to_load = paths.size()
 	
@@ -167,7 +167,7 @@ func _on_preload_resource_loaded(resource: Resource, preload_info: Dictionary) -
 
 # Process the resource load queue
 func _process_load_queue() -> void:
-	if _load_queue.empty() or _is_loading:
+	if _load_queue.is_empty() or _is_loading:
 		return
 	
 	# Start the next loading operation
@@ -265,7 +265,7 @@ func _estimate_resource_size(resource: Resource) -> int:
 	
 	# Different resource types have different memory footprints
 	if resource is Texture2D:
-		var texture: Texture2D = resource
+		var texture = resource as Texture2D
 		size = texture.get_width() * texture.get_height() * 4  # RGBA, 4 bytes per pixel
 	elif resource is AudioStream:
 		size = 500 * 1024  # Rough estimate for audio streams

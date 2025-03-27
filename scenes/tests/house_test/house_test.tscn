@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpkhjdsvlj6kr"]
+
+[ext_resource type="Script" path="res://scenes/tests/house_test/house_test.gd" id="1_1jneh"]
+[ext_resource type="PackedScene" uid="uid://cvlr62qhsf3gn" path="res://scenes/house/house.tscn" id="2_mwv34"]
+
+[node name="HouseTest" type="Node3D"]
+script = ExtResource("1_1jneh")
+
+[node name="House" parent="." instance=ExtResource("2_mwv34")]
+
+[node name="IsometricCamera" type="Camera3D" parent="."]
+transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 15, 15, 15)
+projection = 1
+size = 20.0

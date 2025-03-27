@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4gumhc2v183g"]
+
+[ext_resource type="Script" path="res://scripts/entities/Room.gd" id="1_xvn5u"]
+[ext_resource type="PackedScene" uid="uid://dmgpeu8g7lpaj" path="res://scenes/house/furniture/couch.tscn" id="2_7u1bq"]
+[ext_resource type="PackedScene" uid="uid://bf2xtjhbsmgtv" path="res://scenes/house/furniture/pet_bed.tscn" id="3_p3pyx"]
+
+[node name="LivingRoom" type="Node3D"]
+script = ExtResource("1_xvn5u")
+room_name = "Living Room"
+room_size = Vector3(7, 3, 6)
+
+[node name="Couch" parent="." instance=ExtResource("2_7u1bq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="PetBed" parent="." instance=ExtResource("3_p3pyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1.5)

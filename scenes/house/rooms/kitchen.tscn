@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3ybv0v1k5e5q"]
+
+[ext_resource type="Script" path="res://scripts/entities/Room.gd" id="1_xvn5u"]
+[ext_resource type="PackedScene" uid="uid://bh4ojddyga0lu" path="res://scenes/house/furniture/food_bowl.tscn" id="2_kkbr1"]
+
+[node name="Kitchen" type="Node3D"]
+script = ExtResource("1_xvn5u")
+room_name = "Kitchen"
+room_size = Vector3(5, 3, 5)
+
+[node name="FoodBowl" parent="." instance=ExtResource("2_kkbr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 1.5)
+
+[node name="WaterBowl" parent="." instance=ExtResource("2_kkbr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0.5)
+food_type = "water"
+
+[node name="FoodBowl2" parent="." instance=ExtResource("2_kkbr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 1.5)
+food_type = "premium food"

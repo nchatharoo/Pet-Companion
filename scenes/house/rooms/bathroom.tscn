@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d00kgp1q73vvm"]
+
+[ext_resource type="Script" path="res://scripts/entities/Room.gd" id="1_xvn5u"]
+
+[node name="Bathroom" type="Node3D"]
+script = ExtResource("1_xvn5u")
+room_name = "Bathroom"
+room_size = Vector3(4, 3, 4)

@@ -1,3 +1,20 @@
-[gd_scene format=3 uid="uid://b4qy55kbtbmgp"]
+[gd_scene load_steps=3 format=3 uid="uid://b4qy55kbtbmgp"]
+
+[ext_resource type="Environment" path="res://resources/default_env.tres" id="1_r8uel"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_c5g0g"]
 
 [node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_r8uel")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.383022, 0.321394, 0, 0.642788, 0.766044, -0.5, -0.663414, 0.55667, 0, 5, 0)
+shadow_enabled = true
+
+[node name="MainCamera" type="Camera3D" parent="."]
+transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 8, 6, 8)
+attributes = SubResource("CameraAttributesPractical_c5g0g")
+current = true
+fov = 55.0

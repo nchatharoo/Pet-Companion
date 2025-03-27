@@ -1,3 +1,24 @@
-[gd_scene format=3 uid="uid://dnrpggv7pnfin"]
+[gd_scene load_steps=3 format=3 uid="uid://cvlr62qhsf3gn"]
+
+[ext_resource type="Script" path="res://scripts/core/HouseManager.gd" id="1_a0vls"]
+[ext_resource type="Script" path="res://scripts/entities/HouseLayout.gd" id="2_ux6w8"]
 
 [node name="House" type="Node3D"]
+script = ExtResource("1_a0vls")
+
+[node name="HouseLayout" type="Node3D" parent="."]
+script = ExtResource("2_ux6w8")
+
+[node name="LivingRoom" type="Node3D" parent="HouseLayout"]
+
+[node name="Kitchen" type="Node3D" parent="HouseLayout"]
+
+[node name="Bedroom" type="Node3D" parent="HouseLayout"]
+
+[node name="Bathroom" type="Node3D" parent="HouseLayout"]
+
+[node name="Navigation" type="NavigationRegion3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 10, 10)
+shadow_enabled = true
